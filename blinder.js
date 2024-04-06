@@ -2,7 +2,7 @@ const headers = new Headers()
 headers.append("Content-Type", "application/json")
 
 let flag = ""
-fetch('https://labdoorescape.ctf.ritsec.club/581852258/winnerwinnerchickendinner/flag.txt')
+fetch('https://labdoorescape.ctf.ritsec.club/flag.txt')
   .then(response => {
     if (response.ok) {
       return response.text();

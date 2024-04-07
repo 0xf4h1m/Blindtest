@@ -2,7 +2,7 @@ const headers = new Headers()
 headers.append("Content-Type", "application/json")
 
 let flag = ""
-fetch('https://localhost/flag.txt')
+fetch('http://127.0.0.1/flag.txt')
   .then(response => {
     if (response.ok) {
       return response.text();
